@@ -1,0 +1,38 @@
+HELIOS DEFI - GITHUB UPLOAD GUIDE
+
+This is the real website source code folder to upload to GitHub.
+
+Folder to upload:
+helios-defi
+
+Important:
+- Do NOT upload node_modules.
+- Do NOT upload your real .env file.
+- Upload package.json, package-lock.json, src, public, index.html, config files, README.md, and supabase/schema.sql.
+
+Run locally:
+1. Open the helios-defi folder in VS Code.
+2. Open Terminal.
+3. Run: npm install
+4. Run: npm run dev
+5. Open the localhost URL shown in terminal.
+
+GitHub upload method:
+1. Go to github.com
+2. Create a new repository named helios-defi
+3. Upload all files from inside this helios-defi folder.
+4. Commit the files.
+
+Vercel deployment:
+1. Go to vercel.com
+2. Sign in with GitHub
+3. Add New Project
+4. Select the helios-defi repository
+5. Build command: npm run build
+6. Output directory: dist
+7. Deploy
+
+Supabase:
+- Create a Supabase project when you want real login and database.
+- Run the SQL from supabase/schema.sql.
+- Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in Vercel Environment Variables.
