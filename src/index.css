@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(245, 178, 60, 0.12), transparent 30rem),
+    radial-gradient(circle at top right, rgba(0, 208, 132, 0.10), transparent 28rem),
+    #000000;
+  color: #f5f7f6;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar-lux {
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.38);
+}
+
+.glass-card {
+  background: linear-gradient(145deg, rgba(11, 21, 16, 0.9), rgba(6, 20, 15, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(90deg, #d6aa50, #ffe29b, #f5b23c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.green-gradient-text {
+  background: linear-gradient(90deg, #f5f7f6, #00d084, #38a8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-text-large {
+  background: linear-gradient(90deg, #c79634 0%, #f5b23c 30%, #ffdb82 55%, #d6aa50 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 45px rgba(245, 178, 60, 0.14);
+}
+
+.input-field {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(2, 8, 5, 0.72);
+  padding: 0.85rem 1rem;
+  color: #f5f7f6;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.input-field:focus {
+  border-color: rgba(245, 178, 60, 0.75);
+  box-shadow: 0 0 0 4px rgba(245, 178, 60, 0.12);
+}
+
+.btn-primary,
+.btn-gold {
+  border-radius: 0.38rem;
+  background: linear-gradient(90deg, #d6aa50, #f5c96f);
+  padding: 0.95rem 1.75rem;
+  font-weight: 900;
+  color: #070707;
+  letter-spacing: 0.02em;
+  transition: transform 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 12px 34px rgba(214, 170, 80, 0.22);
+}
+
+.btn-primary:hover,
+.btn-gold:hover {
+  transform: translateY(-2px);
+  opacity: 0.97;
+  box-shadow: 0 18px 44px rgba(214, 170, 80, 0.28);
+}
+
+.btn-secondary,
+.btn-outline-gold {
+  border-radius: 0.38rem;
+  border: 1px solid rgba(214, 170, 80, 0.42);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.95rem 1.75rem;
+  font-weight: 900;
+  color: #f5f7f6;
+  letter-spacing: 0.02em;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.btn-secondary:hover,
+.btn-outline-gold:hover {
+  border-color: rgba(245, 178, 60, 0.82);
+  transform: translateY(-2px);
+  background: rgba(245, 178, 60, 0.08);
+}
+
+.warning-box {
+  border: 1px solid rgba(245, 178, 60, 0.35);
+  background: rgba(245, 178, 60, 0.08);
+  color: #f7d69a;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 58px 58px;
+  mask-image: radial-gradient(circle at center, black, transparent 72%);
+}
+
+.hero-lux {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.98) 0%, rgba(0,0,0,0.93) 43%, rgba(0,0,0,0.72) 100%),
+    radial-gradient(circle at 72% 38%, rgba(214, 170, 80, 0.13), transparent 25rem),
+    #050505;
+}
+
+.star-layer {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.75) 1px, transparent 1.5px),
+    radial-gradient(circle, rgba(255,255,255,0.38) 1px, transparent 1.4px),
+    radial-gradient(circle, rgba(214,170,80,0.35) 1px, transparent 1.8px);
+  background-size: 115px 115px, 190px 190px, 280px 280px;
+  background-position: 8px 18px, 40px 90px, 120px 60px;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.orbit-ring {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid rgba(214, 170, 80, 0.20);
+  box-shadow: inset 0 0 45px rgba(214, 170, 80, 0.08), 0 0 70px rgba(214, 170, 80, 0.08);
+}
+
+.orbit-one {
+  right: 6%;
+  top: 7%;
+  height: 500px;
+  width: 500px;
+}
+
+.orbit-two {
+  right: 15%;
+  top: 18%;
+  height: 320px;
+  width: 320px;
+  border-color: rgba(0, 208, 132, 0.16);
+}
+
+.gold-coin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #1d1302;
+  background:
+    radial-gradient(circle at 35% 28%, #fff2b8 0%, #ffd66a 18%, #d6aa50 43%, #8c5b12 72%, #3f2505 100%);
+  border: 12px solid rgba(255, 224, 139, 0.85);
+  box-shadow:
+    inset 0 0 0 10px rgba(60, 36, 3, 0.25),
+    inset 0 0 55px rgba(255, 255, 255, 0.24),
+    0 0 80px rgba(214, 170, 80, 0.22);
+}
+
+.gold-coin span,
+.large-coin span {
+  font-weight: 1000;
+  line-height: 1;
+  text-shadow: 0 4px 0 rgba(255,255,255,0.15), 0 10px 18px rgba(0,0,0,0.22);
+}
+
+.hero-coin {
+  position: absolute;
+  right: 18%;
+  top: 16%;
+  height: 285px;
+  width: 285px;
+  transform: rotate(-13deg);
+}
+
+.hero-coin span {
+  font-size: 10rem;
+}
+
+.floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 255px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(16px);
+  border-radius: 1.35rem;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 22px 60px rgba(0,0,0,0.44);
+}
+
+.card-one { right: 5%; top: 18%; }
+.card-two { right: 43%; top: 57%; }
+.card-three { right: 8%; bottom: 14%; }
+
+.about-lux {
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.92), rgba(0,0,0,0.74)),
+    radial-gradient(circle at 22% 50%, rgba(214,170,80,0.18), transparent 26rem),
+    #030303;
+}
+
+.coin-sparkles {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(214,170,80,0.45) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.20) 1px, transparent 2px);
+  background-size: 130px 130px, 210px 210px;
+  opacity: 0.36;
+  pointer-events: none;
+}
+
+.large-coin {
+  display: flex;
+  height: min(520px, 86vw);
+  width: min(520px, 86vw);
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 16px solid rgba(255, 224, 139, 0.88);
+  background:
+    radial-gradient(circle at 35% 25%, #fff2b6 0%, #ffd66d 18%, #d7aa50 42%, #8e5c14 71%, #392005 100%);
+  box-shadow:
+    inset 0 0 0 18px rgba(55, 35, 5, 0.22),
+    inset 0 0 90px rgba(0,0,0,0.24),
+    0 0 100px rgba(214, 170, 80, 0.24);
+  transform: rotate(-10deg);
+}
+
+.large-coin span {
+  color: #4a2b02;
+  font-size: clamp(10rem, 26vw, 20rem);
+}
+
+.feature-lux {
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.83)),
+    radial-gradient(circle at 14% 32%, rgba(214, 170, 80, 0.22), transparent 22rem),
+    radial-gradient(circle at 82% 20%, rgba(214, 170, 80, 0.16), transparent 20rem),
+    #030303;
+}
+
+.falling-coins {
+  position: absolute;
+  inset: 0;
+  opacity: 0.24;
+  background-image:
+    radial-gradient(ellipse at center, rgba(214,170,80,0.65) 0%, rgba(214,170,80,0.24) 29%, transparent 32%),
+    radial-gradient(ellipse at center, rgba(214,170,80,0.55) 0%, rgba(214,170,80,0.2) 28%, transparent 32%);
+  background-size: 240px 120px, 310px 145px;
+  background-position: 0 0, 100px 70px;
+  transform: rotate(-8deg) scale(1.08);
+  pointer-events: none;
+}
+
+.feature-box {
+  min-height: 255px;
+  border: 1px solid rgba(214, 170, 80, 0.10);
+  background: rgba(0, 0, 0, 0.64);
+  padding: 2.1rem;
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(214, 170, 80, 0.38);
+  background: rgba(12, 10, 6, 0.80);
+}
+
+.feature-icon {
+  display: flex;
+  height: 58px;
+  width: 58px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #d6aa50;
+}
+
+.pricing-card {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1.8rem;
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.018));
+  padding: 2rem;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(214, 170, 80, 0.35);
+}
+
+.pricing-card-highlight {
+  border-color: rgba(214, 170, 80, 0.42);
+  background: linear-gradient(145deg, rgba(214, 170, 80, 0.14), rgba(0, 208, 132, 0.07), rgba(255,255,255,0.03));
+}
+
+.dashboard-preview {
+  border: 1px solid rgba(214, 170, 80, 0.18);
+  border-radius: 2rem;
+  background: linear-gradient(145deg, rgba(14, 13, 10, 0.92), rgba(2, 8, 5, 0.88));
+  padding: 2rem;
+  box-shadow: 0 30px 85px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.info-tile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255,255,255,0.72);
+  font-weight: 700;
+}
+
+.premium-mini-card {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+  padding: 1rem;
+  text-align: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 18px 40px rgba(0,0,0,0.22);
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(11, 21, 16, 0.9), rgba(4, 10, 8, 0.75));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.28);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle at top right, rgba(0, 208, 132, 0.18), transparent 35%),
+              radial-gradient(circle at bottom left, rgba(245, 178, 60, 0.12), transparent 32%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.plan-card {
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.02));
+  padding: 1.75rem;
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+}
+
+.plan-card-highlight {
+  border-color: rgba(0, 208, 132, 0.35);
+  background: linear-gradient(145deg, rgba(0, 208, 132, 0.12), rgba(245, 178, 60, 0.08), rgba(255,255,255,0.03));
+  transform: translateY(-8px);
+}
+
+@media (max-width: 1024px) {
+  .hero-lux {
+    min-height: auto;
+  }
+}
