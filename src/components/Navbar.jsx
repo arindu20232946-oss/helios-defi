@@ -27,13 +27,16 @@ export default function Navbar() {
     <header className="navbar-lux sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 lg:px-10">
         
-        {/* ADDED: "Helios DEFI" text next to the logo image */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.png" alt="Helios DeFi logo" className="h-16 w-44 object-contain object-left" />
-          <span className="text-xl font-bold text-white tracking-wide">Helios DEFI</span>
+        {/* LOGO & BRANDING */}
+        <Link to="/" className="flex items-center gap-2 transition hover:opacity-90">
+          <img src="/logo.png" alt="Helios DeFi logo" className="h-12 w-auto object-contain" />
+          <span className="text-2xl font-extrabold tracking-wider text-helios-gold">
+            Helios DEFI
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-4 lg:flex">
+        {/* CENTER NAVIGATION (Balanced) */}
+        <nav className="hidden flex-1 items-center justify-center gap-6 lg:flex xl:gap-8">
           <NavLink to="/" className={navLink}>Home</NavLink>
           <button type="button" onClick={() => goToSection('about')} className={navButton}>About Us</button>
           <button type="button" onClick={() => goToSection('plans')} className={navButton}>Plan</button>
@@ -43,21 +46,22 @@ export default function Navbar() {
           <button type="button" onClick={() => goToSection('contact')} className={navButton}>Contact</button>
         </nav>
 
-        <div className="flex items-center gap-3">
+        {/* RIGHT ACTION BUTTONS */}
+        <div className="flex items-center justify-end gap-3 lg:w-[250px]">
           <Link
             to={user ? '/dashboard' : '/login'}
-            className="flex h-14 w-14 items-center justify-center rounded-md bg-helios-gold text-black transition hover:bg-[#ffd178]"
+            className="flex h-12 w-12 items-center justify-center rounded-md bg-helios-gold text-black transition hover:bg-[#ffd178] xl:h-14 xl:w-14"
             aria-label="Account"
           >
-            <UserRound size={24} />
+            <UserRound size={22} />
           </Link>
 
-          <button className="hidden h-14 items-center gap-5 rounded-md border border-helios-gold/30 px-5 text-white md:flex">
+          <button className="hidden h-12 items-center gap-3 rounded-md border border-helios-gold/30 px-4 text-white transition hover:border-helios-gold/60 md:flex xl:h-14 xl:px-5">
             Eng <ChevronDown size={18} />
           </button>
 
           {user && (
-            <button onClick={handleLogout} className="hidden items-center gap-2 rounded-md border border-white/15 px-4 py-3 text-sm font-semibold text-white hover:border-helios-gold/50 md:flex">
+            <button onClick={handleLogout} className="hidden h-12 items-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-white transition hover:border-helios-gold/50 md:flex xl:h-14">
               <LogOut size={16} /> Logout
             </button>
           )}
