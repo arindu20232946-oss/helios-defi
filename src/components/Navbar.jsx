@@ -26,8 +26,11 @@ export default function Navbar() {
   return (
     <header className="navbar-lux sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 lg:px-10">
+        
+        {/* ADDED: "Helios DEFI" text next to the logo image */}
         <Link to="/" className="flex items-center gap-3">
           <img src="/logo.png" alt="Helios DeFi logo" className="h-16 w-44 object-contain object-left" />
+          <span className="text-xl font-bold text-white tracking-wide">Helios DEFI</span>
         </Link>
 
         <nav className="hidden items-center gap-4 lg:flex">
