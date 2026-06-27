@@ -27,11 +27,11 @@ export default function Navbar() {
     <header className="navbar-lux sticky top-0 z-50 border-b border-white/10 bg-black/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-4 lg:px-10">
         
-        {/* LOGO & BRANDING */}
-        <Link to="/" className="flex items-center gap-2 transition hover:opacity-90">
-          <img src="/logo.png" alt="Helios DeFi logo" className="h-12 w-auto object-contain" />
-          <span className="text-2xl font-extrabold tracking-wider text-helios-gold">
-            Helios DEFI
+        {/* LOGO & BRANDING - Maximized and Bolder */}
+        <Link to="/" className="flex items-center gap-3 transition hover:opacity-90">
+          <img src="/logo.png" alt="Helios DeFi logo" className="h-16 w-auto object-contain" />
+          <span className="text-3xl font-black tracking-wider text-helios-gold">
+            HELIOS DEFI
           </span>
         </Link>
 
@@ -50,18 +50,18 @@ export default function Navbar() {
         <div className="flex items-center justify-end gap-3 lg:w-[250px]">
           <Link
             to={user ? '/dashboard' : '/login'}
-            className="flex h-12 w-12 items-center justify-center rounded-md bg-helios-gold text-black transition hover:bg-[#ffd178] xl:h-14 xl:w-14"
+            className="flex h-14 w-14 items-center justify-center rounded-md bg-helios-gold text-black transition hover:bg-[#ffd178]"
             aria-label="Account"
           >
             <UserRound size={22} />
           </Link>
 
-          <button className="hidden h-12 items-center gap-3 rounded-md border border-helios-gold/30 px-4 text-white transition hover:border-helios-gold/60 md:flex xl:h-14 xl:px-5">
+          <button className="hidden h-14 items-center gap-3 rounded-md border border-helios-gold/30 px-5 text-white transition hover:border-helios-gold/60 md:flex">
             Eng <ChevronDown size={18} />
           </button>
 
           {user && (
-            <button onClick={handleLogout} className="hidden h-12 items-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-white transition hover:border-helios-gold/50 md:flex xl:h-14">
+            <button onClick={handleLogout} className="hidden h-14 items-center gap-2 rounded-md border border-white/15 px-4 text-sm font-semibold text-white transition hover:border-helios-gold/50 md:flex">
               <LogOut size={16} /> Logout
             </button>
           )}
